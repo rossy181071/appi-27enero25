@@ -11,41 +11,24 @@ import viteLogo from '/vite.svg'
 export class MyElement extends LitElement {
   static get properties() {
     return {
-      /**
-       * Copy for the read the docs hint.
-       */
-      docsHint: { type: String },
-
-      /**
-       * The number of times the button has been clicked.
-       */
-      count: { type: Number },
+      
+/**
+ * La url de la imagen 1
+ */
+image1Url: { type: String }
     }
   }
 
   constructor() {
     super()
+    this.image1Url = "https://i.pinimg.com/originals/2f/53/6f/2f536f6d518a83233b63e40fca17af9e.jpg "
     this.docsHint = 'Click on the Vite and Lit logos to learn more'
     this.count = 0
   }
 
   render() {
     return html`
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
-        </a>
-      </div>
-      <slot></slot>
-      <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
-      </div>
-      <p class="read-the-docs">${this.docsHint}</p>
+      <img src="${this.image1Url}">
     `
   }
 
