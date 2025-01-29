@@ -11,6 +11,10 @@ import viteLogo from '/vite.svg'
 export class MyElement extends LitElement {
   static get properties() {
     return {
+/**
+ * Texto header 1
+ */
+header1Text: { type: String},
       
 /**
  * La url de la imagen 1
@@ -21,14 +25,15 @@ image1Url: { type: String }
 
   constructor() {
     super()
+    this.header1Text = "27 ENERO 2025 DIA DEL NUTRIOLOGO"
     this.image1Url = "https://i.pinimg.com/originals/2f/53/6f/2f536f6d518a83233b63e40fca17af9e.jpg "
-    this.docsHint = 'Click on the Vite and Lit logos to learn more'
-    this.count = 0
+   
   }
 
   render() {
     return html`
-      <img src="${this.image1Url}">
+    <h1>${this.header1Text}</h1>
+    <img src="${this.image1Url}">
     `
   }
 
